@@ -96,7 +96,7 @@ def main():
         train_data = load_data('./data/interim/train_processed.csv')
         test_data = load_data('./data/interim/test_processed.csv')
 
-        train_df, test_df = apply_tfidf(train_data, test_data, max_features)
+        train_df, test_df = apply_bow(train_data, test_data, max_features)
 
         save_data(train_df, os.path.join("./data", "processed", "train_bow.csv"))
         save_data(test_df, os.path.join("./data", "processed", "test_bow.csv"))
